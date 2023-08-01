@@ -1,5 +1,5 @@
 main() {
-  typeBoolean();
+  typeSets();
 }
 
 int typeInt() {
@@ -42,7 +42,48 @@ typeBoolean() {
 
   bool? isActive;
   isActive = true;
-  if (isActive!) {
+  if (isActive) {
     print('sleeping: $sleeping , programming: $programming');
   }
+}
+
+typeList() {
+  //? Primera forma de definir una lista , una lista la podemos definir como una collecion de datos
+  var lenguages = ['JavaScript', 'python', 'Golang', 'c#'];
+
+  //? segunda forma
+  List<String> lenguagesTwo = ['Dart', 'php', 'ruby'];
+
+  //? tercera forma
+  var numbers = <int>[
+    1,
+    2,
+    3,
+  ];
+
+  print(numbers);
+}
+
+typeSets() {
+  //? los sets al igual que las listas son un tipo de collecion pero en este caso son desordenadas y tienen la cualidad de no permitir datos repetidos dentro de su extructura
+  Set<String> lenguages = {'Dart', 'php', 'ruby'};
+
+  //? no se permiten datos repetidos
+  lenguages.add('python');
+  lenguages.add('python');
+  lenguages.add('python');
+  lenguages.add('python');
+
+  //? en este punto lenguages tendra como valores {'Dart', 'php', 'ruby' , 'python'};
+  // print(lenguages);
+
+  //? tambien podemos transformar una lista a set  y de esa poder trabajar con esta extructura
+  var lenguagesList = ['JavaScript', 'python', 'Golang', 'c#'];
+
+  lenguagesList.add('Java');
+  lenguagesList.add('Java');
+  lenguagesList.add('Java');
+
+  Set<String> newLengages = lenguagesList.toSet(); // tranformacion set
+  print(newLengages.toList().length); //trasnformacion a lista nuevamente
 }
