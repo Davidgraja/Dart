@@ -1,5 +1,5 @@
 main() {
-  typeSets();
+  typeMaps();
 }
 
 int typeInt() {
@@ -86,4 +86,24 @@ typeSets() {
 
   Set<String> newLengages = lenguagesList.toSet(); // tranformacion set
   print(newLengages.toList().length); //trasnformacion a lista nuevamente
+}
+
+typeMaps() {
+  //? primera forma de crear un map
+  var user = {'name': 'David', 'lastName': 'Grajales Paredes', 'age': 22};
+
+  //? segunda forma de crear un map
+  Map<String, Object> hero = {
+    "name": 'Iron man',
+    'power': 'intelligent',
+    'level': 8
+  };
+
+  //? tercera forma de definir un map
+  Map<String, Object> copyOfUser = new Map();
+
+  copyOfUser.addAll(user); // podemos añadir dentro de un map otro map
+
+  //? acceder a un valor  por medio de su llave
+  print(hero['nivel']);
 }
