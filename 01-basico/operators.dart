@@ -1,5 +1,5 @@
 main() {
-  assigmentOperators();
+  arithmeticOperators();
 }
 
 arithmeticOperators() {
@@ -47,5 +47,13 @@ assigmentOperators() {
 
   z = c ?? d ?? 90;
 
-  print(z);
+  // print(z);
+
+  //? operador de tipo :
+
+  int i = 10;
+  String y = '20';
+
+  print(i is int);
+  print(y is! int);
 }
